@@ -83,7 +83,8 @@ Property | Example Values | Notes
 margin | 2px<br />2px 4px<br />3px 1px 5px<br />1px 3px 2px 6px |
 padding | 2px<br />2px 4px<br />3px 1px 5px<br />1px 3px 2px 6px |
 box-shadow | none<br />0 2px 4px rgba(52, 21, 23, 0.32) | Inset shadows are not supported.
+flex | 1<br />1 30px<br />1 2 10% | __Only the first value will be output__ and the rest will be ignored, as React Native does not support flex-basis or flex-shrink.
 
 # About
 
-Licensed under MIT. Based off of the works of [gulp-react-native-css](https://github.com/soliury/gulp-react-native-css) and [react-native-css](https://github.com/sabeurthabti/react-native-css)
+Licensed under MIT. Based off of the works of [gulp-react-native-css](https://github.com/soliury/gulp-react-native-css) and [react-native-css](https://github.com/sabeurthabti/react-native-css).
