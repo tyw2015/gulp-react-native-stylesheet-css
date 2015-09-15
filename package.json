@@ -1,6 +1,6 @@
 {
   "name": "gulp-react-native-stylesheet-css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gulp plugin for converting CSS files to React Native StyleSheets.",
   "main": "index.js",
   "scripts": {
