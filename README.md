@@ -1,4 +1,4 @@
-# gulp-react-native-sas
+# gulp-react-native-stylesheet-css
 
 Gulp plugin for converting CSS files to React Native StyleSheets.
 
