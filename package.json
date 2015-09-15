@@ -1,0 +1,29 @@
+{
+  "name": "gulp-react-native-stylesheet-css",
+  "version": "1.0.0",
+  "description": "Gulp plugin for converting CSS files to React Native StyleSheets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jjshammas@github.com/jjshammas/gulp-react-native-stylesheet-css.git"
+  },
+  "author": "John Shammas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjshammas/gulp-react-native-stylesheet-css/issues"
+  },
+  "homepage": "https://github.com/jjshammas/gulp-react-native-stylesheet-css#readme",
+  "dependencies": {
+    "css-parse": "^2.0.0",
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0",
+    "to-camel-case": "^0.2.1"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.1",
+    "gulp": "^3.9.0"
+  }
+}
