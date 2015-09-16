@@ -3,13 +3,13 @@
 Gulp plugin for converting CSS files to React Native StyleSheets.
 
 
-# Install
+## Install
 
 ```
 npm install gulp-react-native-stylesheet-css --save-dev
 ```
 
-# Basic usage
+## Basic usage
 
 ```javascript
 var gulp = require('gulp'),
@@ -26,7 +26,7 @@ gulp.task('styles', function() {
 
 SASS or any other CSS preprocessor is not required. Plain .CSS files may be used.
 
-# Example output
+## Example output
 
 Example using SASS as a preprocessor:
 
@@ -78,11 +78,11 @@ module.exports ={
 }
 ```
 
-# Properties supported
+## Properties supported
 
 Any property found in your CSS will be camelCased. By default, this plugin will always output values as JavaScript Number or Boolean objects when appropriate. Values with units attached, including "em" and "px," will be output without their unit suffixes.
 
-## Special-case properties
+### Special-case properties
 
 The following properties output different keys to satisfy React Native's requirements. Unless otherwise noted, the values for each correspond with CSS3.
 
@@ -94,6 +94,6 @@ box-shadow | none<br />0 2px 4px rgba(52, 21, 23, 0.32) | Inset shadows are not 
 flex | 1<br />1 30px<br />1 2 10% | __Only the first value will be output__ and the rest will be ignored, as React Native does not support flex-basis or flex-shrink.
 transform | perspective(90)<br />rotate(10deg)<br />rotateX(5deg)<br />rotateY(10deg)<br />rotateZ(15deg)<br />rotate3d(5deg, 10deg, 15deg)<br />scale(1.2)<br />scaleX(1.5)<br />scaleY(0.5)<br />scale2d(1.5, 0.5) or scale3d(1.5, 0.5)<br />translateX(5px)<br />translateY(10px)<br />translate2d(5px, 10px) or translate3d(5px, 10px) | You may chain multiple transformations together with a space delimiter, like in CSS3 (see example above).
 
-# About
+## About
 
 Licensed under MIT. Based off of the works of [gulp-react-native-css](https://github.com/soliury/gulp-react-native-css) and [react-native-css](https://github.com/sabeurthabti/react-native-css).
