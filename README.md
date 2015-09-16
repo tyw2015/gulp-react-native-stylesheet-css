@@ -49,7 +49,9 @@ __Input__
 __Output__
 
 ```javascript
-module.exports ={
+var React = require('react-native');
+var { StyleSheet } = React;
+module.exports = StyleSheet.create({
     "header": {
         "marginBottom": 20,
         "shadowColor": "rgb(52,21,23)",
@@ -75,7 +77,7 @@ module.exports ={
             { "rotateZ": "10deg" }
         ]
     }
-}
+});
 ```
 
 ## Properties supported
@@ -93,6 +95,22 @@ padding | 2px<br />2px 4px<br />3px 1px 5px<br />1px 3px 2px 6px |
 box-shadow | none<br />0 2px 4px rgba(52, 21, 23, 0.32) | Inset shadows and spread values are not supported.
 flex | 1<br />1 30px<br />1 2 10% | __Only the first value will be output__ and the rest will be ignored, as React Native does not support flex-basis or flex-shrink.
 transform | perspective(90)<br />rotate(10deg)<br />rotateX(5deg)<br />rotateY(10deg)<br />rotateZ(15deg)<br />rotate3d(5deg, 10deg, 15deg)<br />scale(1.2)<br />scaleX(1.5)<br />scaleY(0.5)<br />scale2d(1.5, 0.5) or scale3d(1.5, 0.5)<br />translateX(5px)<br />translateY(10px)<br />translate2d(5px, 10px) or translate3d(5px, 10px) | You may chain multiple transformations together with a space delimiter, like in CSS3 (see example above).
+
+## Options
+
+Additional options can be passed to the plugin to customize its output. For example:
+
+```javascript
+    ...
+    .pipe(reactNativeStylesheetCss({ outputPlainObject: true }))
+    ...
+```
+
+__Supported options:__
+
+Option | Values | Default | Notes
+-------|--------|---------|------
+outputPlainObject | Boolean | false | If true, the final output will be only an object of style rules, without requiring React or building a React StyleSheet object.
 
 ## About
 

@@ -4,8 +4,9 @@ var through = require("through2"),
 
 var ext = gutil.replaceExtension;
 
-module.exports = function () {
+module.exports = function (options) {
 	"use strict";
+	options = options || {};
 
 	function reactNativeCss(file, enc, callback) {
 		/*jshint validthis:true*/
@@ -29,9 +30,15 @@ module.exports = function () {
 
 			var style = parseCss(source.replace(/\r?\n|\r/g, ""));
 
-			var prefix = "module.exports =";
+			var prefix = "", suffix = "";
+			if (options.outputPlainObject) {
+				prefix = "module.exports = ";
+			} else {
+				prefix = "var React = require('react-native');\nvar { StyleSheet } = React;\nmodule.exports = StyleSheet.create(";
+				suffix = ");";
+			}
 
-			file.contents = new Buffer(prefix + style);
+			file.contents = new Buffer(prefix + style + suffix);
 
 			file.path = ext(file.path, '.js');
 
