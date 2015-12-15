@@ -36,7 +36,6 @@ __Input__
 #header {
     margin-bottom: 20;
     box-shadow: 0 2px 4px rgba(52, 21, 23, 0.32);
-    bounces: true;
 
     .btn {
         padding: 3 8;
@@ -60,8 +59,7 @@ module.exports = StyleSheet.create({
             "height": 2
         },
         "shadowOpacity": 0.32,
-        "shadowRadius": 4,
-        "bounces": true
+        "shadowRadius": 4
     },
     "header btn": {
         "paddingTop": 3,
