@@ -33,10 +33,18 @@ module.exports = function (options) {
 			var prefix = "", suffix = "";
 			if (options.outputPlainObject) {
 				prefix = "module.exports = ";
-			} else {
-				prefix = "var React = require('react-native');\nvar { StyleSheet } = React;\nmodule.exports = StyleSheet.create(";
+      } else {
+        var moduleName = "react-native"
+        var objectName = "StyleSheet"
+
+        if (options.withExtendedStyleSheet) {
+          moduleName = "react-native-extended-stylesheet"
+          objectName = "EStyleSheet"
+        }
+
+				prefix = "var " + objectName + " = require('" + moduleName + "')." + objectName + ";\nmodule.exports = " + objectName + ".create(";
 				suffix = ");";
-			}
+      }
 
 			file.contents = new Buffer(prefix + style + suffix);
 
