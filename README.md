@@ -9,6 +9,8 @@ Gulp plugin for converting CSS files to React Native StyleSheets.
 npm install gulp-react-native-stylesheet-css --save-dev
 ```
 
+You can use it with [react-native-extended-stylesheet](https://github.com/vitalets/react-native-extended-stylesheet)
+
 ## Basic usage
 
 ```javascript
@@ -101,6 +103,7 @@ Additional options can be passed to the plugin to customize its output. For exam
 ```javascript
     ...
     .pipe(reactNativeStylesheetCss({ outputPlainObject: true }))
+    .pipe(reactNativeStylesheetCss({ withExtendedStyleSheet: true }))
     ...
 ```
 
@@ -109,6 +112,7 @@ __Supported options:__
 Option | Values | Default | Notes
 -------|--------|---------|------
 outputPlainObject | Boolean | false | If true, the final output will be only an object of style rules, without requiring React or building a React StyleSheet object.
+withExtendedStyleSheet | Boolean | false | Support for [react-native-extended-stylesheet](https://github.com/vitalets/react-native-extended-stylesheet)
 
 ## About
 
