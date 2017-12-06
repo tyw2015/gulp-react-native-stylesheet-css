@@ -42,7 +42,7 @@ module.exports = function (options) {
           objectName = "EStyleSheet"
         }
 
-				prefix = "var " + objectName + " = require('" + moduleName + "')." + objectName + ";\nmodule.exports = " + objectName + ".create(";
+				prefix = "import autoAdaption from 'autoAdaption';\nmodule.exports = autoAdaption(";
 				suffix = ");";
       }
 
